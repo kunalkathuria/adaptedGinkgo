@@ -26,5 +26,5 @@ cd /path_to_adaptedGinkgo/bin
 ./runAdaptedGinkgo [path_to_single_cell_BAM_files] [sample_name] [work_dir] [full_path_to_Ginkgo_master] 
 ```
 # Results
-The CNV calls for all cells can be found in /path_to_Ginkgo/uploads/sample_name_runs/run_2/CNV1
+The CNV calls for all cells should then be found in /path_to_Ginkgo/uploads/sample_name_runs/run_2/CNV1
 
