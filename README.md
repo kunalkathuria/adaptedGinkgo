@@ -19,10 +19,6 @@ Go to source code directory and run installation file:
 cd /path_to_adaptedGinkgo/source
 ./install.sh
 ```
-For ease of running from any directory, add bin directory to path by adding the following line in bash_profile (usually accessible as ~/.bash_profile):
-```
-export PATH="/pathToClonedRepository/adaptedGinkgo/bin:$PATH"
-```
 # Usage
 Go to the "bin" directory to run:
 ```
