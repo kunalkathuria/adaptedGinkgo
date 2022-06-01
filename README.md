@@ -14,14 +14,17 @@ Clone adaptedGinkgo to your local directory by running:
 ```
 git clone https://github.com/kunalkathuria/adaptedGinkgo.git
 ```
-Go to source code directory and run installation file:
+Go to source code directory and run installation file with the first argument being the full local path to the Ginkgo directory:
 ```
 cd /path_to_adaptedGinkgo/source
-./install.sh
+./install.sh /path_to_Ginkgo/
 ```
 # Usage
-Go to the "bin" directory to run:
+Go to the "bin" directory to run with listed arguments:
 ```
 cd /path_to_adaptedGinkgo/bin
-./runAdaptedGinkgo
+./runAdaptedGinkgo [path_to_single_cell_BAM_files] [sample_name] [work_dir] [full_path_to_Ginkgo_master] 
 ```
+# Results
+The CNV calls for all cells can be found in /path_to_Ginkgo/uploads/sample_name_runs/run_2/CNV1
+
