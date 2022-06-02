@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+BAMdir1=$1
+sampleTag=$2
+undoSD=3
+badBinWorkDir=$3
+ginkgoDir=$4
+ginkgoDirU=${4}/uploads
+badBinPath=${ginkgoDir}/genomes/hg19/badbins_variable_500000_101_bowtie
+BAMdir2=${ginkgoDirU}/${sampleTag}_runs # copy single cells to a location within this directory
+bin=$(pwd -P)
+mkdir -p $BAMdir2
+rm -f -r ${ginkgoDirU}/${sampleTag}_runs/*
+
+cp -r ${BAMdir1} ${BAMdir2}/run_0
+cp ${ginkgoDir}/genomes/hg19/badbins_variable_500000_101_bowtie.original $badBinPath 
+./prepRunGinkgo.sh $sampleTag 1 $undoSD noAddedBadBins $ginkgoDir
+./findBadBins.sh $badBinWorkDir $sampleTag 1 $badBinPath $ginkgoDir $bin
+./prepRunGinkgo.sh $sampleTag 2 $undoSD withAllBadBins $ginkgoDir
+cat ${ginkgoDirU}/${sampleTag}_runs/run_2/binNormalCNs.txt | grep -i mean | cut -d " " -f10,12 > ${ginkgoDirU}/${sampleTag}_runs/run_2/genomewideMAD.allCells.txt
