@@ -27,5 +27,5 @@ cd /path_to_adaptedGinkgo/bin
 ```
 # Results
 1. The CNV calls for all cells should then be found in /path_to_Ginkgo/uploads/sample_name_runs/run_2/CNV1
-2. The genome-wide MAD scores for all cells would be found in /path_to_Ginkgo/uploads/sample_name_runs/run_2/genomewideMAD.allCells.txt. This can be used to filter out cells with high MAD scores as per some (data-specific) criteria.
+2. The genome-wide MAD scores for all cells would be found in /path_to_Ginkgo/uploads/sample_name_runs/run_2/genomewideMAD.allCells.txt, which can be used to filter out cells with high MAD scores as per some (perhaps data-specific) criteria.
 
