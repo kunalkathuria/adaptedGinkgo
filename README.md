@@ -4,9 +4,9 @@ An adaptation of Ginkgo (Garvin, T et al, 2015: https://www.nature.com/articles/
 An adapted version of single-cell CNV caller Ginkgo (https://www.nature.com/articles/nmeth.3578) which includes new CNV calling thresholds (empirically established using a Gaussian Mixture Model), filtering of additional genomic outlier regions ("bins") and filtering of low-quality cells based on genome-wide MAD scores. Please refer to [manuscript]() for more details on methodology.
 # Requirements
 Unix-based OS with bash  
-R (version 3.6 and higher)  
+R (version 3.6 and higher) including libraries "dplyr" and "tidyr"  
 Python (version 2.6 and higher)  
-Ginkgo installed (https://github.com/robertaboukhalil/ginkgo)  
+Ginkgo installed with all R dependencies (https://github.com/robertaboukhalil/ginkgo)  
 samtools on the path ("which samtools")  
 bedtools on the path  ("which bedtools") 
 # Installation
