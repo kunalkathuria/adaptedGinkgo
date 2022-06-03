@@ -12,7 +12,7 @@
 minPloidy   = 1.5
 maxPloidy   = 6
 minBinWidth = 5
-main_dir="/dcl02/lieber/kkathuri/SNG/software/ginkgo-master/scripts"
+#main_dir="/dcl02/lieber/kkathuri/SNG/software/ginkgo-master/scripts"
 
 # User settings
 args        = commandArgs(TRUE)
@@ -32,6 +32,7 @@ sex         = as.numeric(args[[13]])
 bb          = as.numeric(args[[14]])
 #KK Edit
 undoSD      = args[[15]]
+main_dir    = args[[16]]
 #cnv_10x     = args[[15]]
 
 # Libraries

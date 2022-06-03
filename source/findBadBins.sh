@@ -23,14 +23,12 @@ cat ${ginkgoDirU}/${i}_runs/run_${ginkgoTag}/binNormalCNs.txt >> var_temp
 mv var_temp binNormalCNs.all.txt
 cat binNormalCNs.all.txt | grep variance | cut -d " " -f5,7 > cellSegVariances.txt 
 
-module load conda_R/3.6
 python ${bin}/prepMedianBinCNs.py ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/cellSegVariances.txt ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/binNormalCNs.all.txt $varCutoff ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}
 python ${bin}/writeMedianBinVals.py ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/binCNMatrix.txt ~/ginkgo/genomes/hg19/variable_500000_101_bowtie $origBadBins ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}
 Rscript ${bin}/findBadBins.R ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/medianBins.autosomes.txt autosomal ${sampleTag}_${i}_${ginkgoTag}
 mv outlierBins.txt outlierBins.autosomes.txt
 wc -l outlierBins.autosomes.txt
 mv median_bin_values.png median_bin_values.autosomes.png
-module unload conda_R/3.6
 
 #orig bad bin here is okay, to feed to Ginkgo
 cat outlierBins.autosomes.txt ${ginkgoDir}/genomes/hg19/badbins_variable_500000_101_bowtie | sort -n > badbins_variable_500000_101_bowtie.new

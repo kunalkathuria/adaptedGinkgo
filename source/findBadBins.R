@@ -1,4 +1,4 @@
-#From Will's bad bin script
+#From Will Chronister's script
 
 library(dplyr)
 library(ggplot2)

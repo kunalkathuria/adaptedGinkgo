@@ -40,7 +40,7 @@ cd -
 
 # run Gg
 cd $ginkgoDir
-./scripts/analyze.sh ${sampleTag}_runs/run_${sNum} $undoSD
+./scripts/analyze.sh ${sampleTag}_runs/run_${sNum} $undoSD $ginkgoDir
 cd -
 
 echo done with sample $sampleTag

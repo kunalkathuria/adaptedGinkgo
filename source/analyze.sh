@@ -8,8 +8,7 @@
 # -- Variables
 # ------------------------------------------------------------------------------
 #KKEdit 9/12/1
-module load conda_R/3.6
-home=/dcl02/lieber/kkathuri/SNG/software/ginkgo-master
+home=$3
 dir=${home}/uploads/${1}
 source ${dir}/config
 distMet=$distMeth
@@ -111,8 +110,8 @@ fi
 # ------------------------------------------------------------------------------
 #KK Edit
 if [ "$process" == "1" ]; then
-  echo "Launching process.R $genome $dir $statFile data $segMeth $binMeth $clustMeth $distMet $color ${ref}_mapped $f $facs $sex $rmbadbins $undoSD"
-  ${home}/scripts/process.R $genome $dir $statFile data $segMeth $binMeth $clustMeth $distMet $color ${ref}_mapped $f $facs $sex $rmbadbins $undoSD
+  echo "Launching process.R $genome $dir $statFile data $segMeth $binMeth $clustMeth $distMet $color ${ref}_mapped $f $facs $sex $rmbadbins $undoSD ${home}/scripts"
+  ${home}/scripts/process.R $genome $dir $statFile data $segMeth $binMeth $clustMeth $distMet $color ${ref}_mapped $f $facs $sex $rmbadbins $undoSD ${home}/scripts
 fi
 
 # ------------------------------------------------------------------------------
