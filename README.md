@@ -19,6 +19,8 @@ Go to source code directory and run installation file with the first argument be
 cd /path_to_adaptedGinkgo/source
 ./install.sh /path_to_Ginkgo/
 ```
+Please ensure that bad bin lists (file name starting with "badbins_variable_...") are included in /path_to_Ginkgo/genomes/hg19/ . If not, you can obtain the list for our bin config here: http://qb.cshl.edu/ginkgo/genomes/hg19/original/badbins_variable_500000_101_bowtie. The installation will not be successful without this file.
+
 # Usage
 Go to the "bin" directory to run with listed arguments:
 ```
