@@ -6,7 +6,7 @@ An adapted version of single-cell CNV caller Ginkgo (https://www.nature.com/arti
 Unix-based OS with bash  
 R (version 3.6 and higher) including libraries "dplyr" and "tidyr"  
 Python (version 2.6 and higher)  
-Ginkgo installed with all R dependencies (https://github.com/robertaboukhalil/ginkgo)  
+Ginkgo installed with all hg19 genomic data files, and R dependencies (https://github.com/robertaboukhalil/ginkgo)  
 samtools on the path ("which samtools")  
 bedtools on the path  ("which bedtools") 
 # Installation
