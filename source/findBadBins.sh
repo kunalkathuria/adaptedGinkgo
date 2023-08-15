@@ -24,7 +24,7 @@ mv var_temp binNormalCNs.all.txt
 cat binNormalCNs.all.txt | grep variance | cut -d " " -f5,7 > cellSegVariances.txt 
 
 python ${bin}/prepMedianBinCNs.py ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/cellSegVariances.txt ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/binNormalCNs.all.txt $varCutoff ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}
-python ${bin}/writeMedianBinVals.py ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/binCNMatrix.txt ~/ginkgo/genomes/hg19/variable_500000_101_bowtie $origBadBins ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}
+python ${bin}/writeMedianBinVals.py ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/binCNMatrix.txt ${ginkgoDir}/genomes/hg19/variable_500000_101_bowtie $origBadBins ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}
 Rscript ${bin}/findBadBins.R ${dir}/badBinAnalysis_${sampleTag}_${ginkgoTag}/medianBins.autosomes.txt autosomal ${sampleTag}_${i}_${ginkgoTag}
 mv outlierBins.txt outlierBins.autosomes.txt
 wc -l outlierBins.autosomes.txt
